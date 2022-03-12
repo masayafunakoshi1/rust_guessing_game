@@ -5,6 +5,7 @@ use rand::Rng;
 //another enum with variants, Less, Greater, and Equal
 //cmp() = comparison operator
 use std::cmp::Ordering;
+use colored::*;
 
 //Vars and Refs are immutable by default
 
@@ -40,10 +41,10 @@ fn main() {
 
         //match expression, takes in any value and compares with it's "arms."
         match guess.cmp(&secret_number){
-            Ordering::Less => println!("Too small!"),
-            Ordering::Greater => println!("Too big!"),
+            Ordering::Less => println!("{}", "Too small!".red()),
+            Ordering::Greater => println!("{}", "Too big!".red()),
             Ordering::Equal => {
-                println!("You Win!!!");
+                println!("{}", "You Win!!!".green());
                 break;
             },
         }        

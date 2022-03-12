@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 # library crate
 rand = "0.8.3" #Only downloads dependencies from 0.8.3 - 9.0.0
+colored="2.0.0"
